@@ -1,0 +1,43 @@
+﻿@page "{handler?}/{Id?}"
+@model Zanobya.Pages.AllCustomersModel
+@{
+}
+
+<h1>All Customers </h1>
+
+<button class="btn btn-primary"><a  class="text-decoration-none text-white" asp-page="Customers" >Add Customer</a></button>
+
+<table class="table">
+
+	<tr>
+		<th>FirstName</th>
+		<th>LastNAme</th>
+		<th>Country</th>
+		<th>city</th>
+		<th>PostalCode</th>
+		<th>Street</th>
+		<th>HouseNum</th>
+		<th>Actions</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+	
+	@foreach (var item in Model.cust)
+	{
+		<tr>
+			<td>@item.FirstName</td>
+			<td>@item.LastName</td>
+			<td>@item.Country</td>
+			<td>@item.City</td>
+			<td>@item.PostalCode</td>
+			<td>@item.Street</td>
+			<td>@item.HouseNumber</td>
+			<td><a asp-page="EditCustomer" asp-route-Id="@item.CustomersId"> Edit </a></td>
+			<td><a asp-page-handler="Delete" asp-route-Id="@item.CustomersId"> Delete </a></td>
+
+		</tr>
+	}
+
+
+</table>

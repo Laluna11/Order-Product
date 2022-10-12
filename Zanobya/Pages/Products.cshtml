@@ -1,0 +1,45 @@
+﻿@page
+@model Zanobya.Pages.ProductsModel
+@{
+}
+
+<h1>Create Product</h1>
+
+<form method="post">
+
+	<div class="form-group">
+		<label  asp-for="@Model.prod.Description"></label>
+		<input class="form-control" type="text" asp-for="@Model.prod.Description" />
+	</div>
+
+	<div class="form-group">
+		<label  asp-for="@Model.prod.PurchasePrice"></label>
+		<input class="form-control" type="number" asp-for="@Model.prod.PurchasePrice" />
+	</div>
+
+	<div class="form-group">
+		<label asp-for="@Model.prod.SellingPrice"></label>
+		<input class="form-control" type="number" asp-for="@Model.prod.SellingPrice" />
+	</div>
+
+	<div class="form-group">
+		<label  asp-for="@Model.prod.Weight"></label>
+		<input class="form-control" type="number" asp-for="@Model.prod.Weight" />
+	</div>
+
+	<div class="form-group">
+		<label asp-for="@Model.prod.StorageLocation"></label>
+		<input class="form-control" type="text" asp-for="@Model.prod.StorageLocation" />
+	</div>
+
+	<div class="form-group">
+		<label asp-for="@Model.prod.Available"></label>
+		<label>Available</label>
+		<input type="radio"  value="true" asp-for="@Model.prod.Available" />
+		<label>Not Available</label>
+		<input  type="radio" value="false" asp-for="@Model.prod.Available" />
+
+	</div>
+
+	<button type="submit" class="btn btn-primary">create</button>
+</form>

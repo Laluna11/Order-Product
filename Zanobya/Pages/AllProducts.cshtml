@@ -1,0 +1,38 @@
+﻿@page
+@model Zanobya.Pages.AllProductsModel
+@{
+}
+
+<h1>All Products </h1>
+
+<button class="btn btn-primary"><a class="text-decoration-none text-white" asp-page="Products" >Add Products</a></button>
+
+<table class="table">
+
+	<tr>
+		<th>Description</th>
+		<th>Available</th>
+		<th>Weight</th>
+		<th>PurchasePrice</th>
+		<th>sellingPrice</th>
+		<th>storageLocation</th>
+		
+		
+	</tr>
+
+	
+	@foreach (var item in Model.prod)
+	{
+		<tr>
+			<td>@item.Description</td>
+			<td>@item.Available</td>
+			<td>@item.Weight</td>
+			<td>@item.PurchasePrice</td>
+			<td>@item.SellingPrice</td>
+			<td>@item.StorageLocation</td>
+			
+		</tr>
+	}
+	
+
+</table>

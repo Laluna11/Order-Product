@@ -1,0 +1,52 @@
+﻿@page
+@model Zanobya.Pages.CustomersModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.customerBinding.FirstName"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.FirstName" />
+        <span asp-validation-for="@Model.customerBinding.FirstName"></span>
+    </div>
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.LastName"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.LastName" />
+        <span asp-validation-for="@Model.customerBinding.LastName"></span>
+    </div>
+
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.Country"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.Country" />
+        <span asp-validation-for="@Model.customerBinding.Country"></span>
+    </div>
+
+     <div class="form-group">
+        <label  asp-for="@Model.customerBinding.City"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.City" />
+        <span asp-validation-for="@Model.customerBinding.City"></span>
+    </div>
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.PostalCode"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.PostalCode" />
+        <span asp-validation-for="@Model.customerBinding.PostalCode"></span>
+    </div>
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.Street"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.Street" />
+        <span asp-validation-for="@Model.customerBinding.Street"></span>
+    </div>
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.HouseNumber"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.HouseNumber" />
+        <span asp-validation-for="@Model.customerBinding.HouseNumber"></span>
+    </div>
+
+
+    <button class="btn btn-primary">Create</button>
+</form>

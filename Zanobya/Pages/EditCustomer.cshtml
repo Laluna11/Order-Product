@@ -1,0 +1,52 @@
+﻿@page "{Id}"
+@model Zanobya.Pages.EditCustomerModel
+@{
+}
+<h1>Edit Customer </h1>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="@Model.customerBinding.FirstName"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.FirstName" value="@Model.cust.FirstName" />
+        <span asp-validation-for="@Model.customerBinding.FirstName"></span>
+    </div>
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.LastName"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.LastName" value="@Model.cust.LastName" />
+        <span asp-validation-for="@Model.customerBinding.LastName"></span>
+    </div>
+
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.Country"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.Country" value="@Model.cust.Country" />
+        <span asp-validation-for="@Model.customerBinding.Country"></span>
+    </div>
+
+     <div class="form-group">
+        <label  asp-for="@Model.customerBinding.City"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.City" value="@Model.cust.City" />
+        <span asp-validation-for="@Model.customerBinding.City"></span>
+    </div>
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.PostalCode"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.PostalCode"  value="@Model.cust.PostalCode"/>
+        <span asp-validation-for="@Model.customerBinding.PostalCode"></span>
+    </div>
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.Street"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.Street" value="@Model.cust.Street"/>
+        <span asp-validation-for="@Model.customerBinding.Street"></span>
+    </div>
+
+    <div class="form-group">
+        <label  asp-for="@Model.customerBinding.HouseNumber"></label>
+        <input class="form-control" asp-for="@Model.customerBinding.HouseNumber" value="@Model.cust.HouseNumber"/>
+        <span asp-validation-for="@Model.customerBinding.HouseNumber"></span>
+    </div>
+
+
+    <button class="btn btn-primary">Edit</button>
+</form>
